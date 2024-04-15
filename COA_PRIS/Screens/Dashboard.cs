@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using COA_PRIS.Properties;
@@ -27,8 +28,10 @@ namespace COA_PRIS.Screens
         public Dashboard()
         {
             InitializeComponent();
-            SidebarContainer.BringToFront();
+            //SidebarContainer.BringToFront();
             title_Panel.BringToFront();
+
+            //this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -41,26 +44,8 @@ namespace COA_PRIS.Screens
 
             login_manager.active_Account = "james";
             tab_Manager.Header_Title = headerTitle;
-            tab_Manager.active_Button(EmployeeBtn);
-            MaintenanceBtn.PerformClick();
-        }
-
-        private void SidebarTimer_tick(object sender, EventArgs e)
-        {
-            int deltaWidth = sidebar_Expanded ? -10 : 10;
-            SidebarContainer.Width += deltaWidth;
-            sideExpand_Btn.Image = sidebar_Expanded ? Resources.swipe_right : Resources.swipe_left;
-
-            if (SidebarContainer.Width == SidebarContainer.MinimumSize.Width || SidebarContainer.Width == SidebarContainer.MaximumSize.Width)
-            {
-                sidebar_Expanded = !sidebar_Expanded;
-                sidebarTimer.Stop();
-            }
-        }
-
-        private void sidebar_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
+            tab_Manager.active_Button(EmployeeBtn, true);
+            EmployeeBtn.PerformClick();
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -131,6 +116,12 @@ namespace COA_PRIS.Screens
                
             }
         }
-       
+
+        private void button_MouseHover(object sender, EventArgs e)
+        {
+            var button = (GunaButton)sender;
+
+            headerTitle.Text = button.Tag.ToString().ToUpper();
+        }
     }
 }

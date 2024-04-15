@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Guna.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace COA_PRIS.Utilities
@@ -61,6 +63,7 @@ namespace COA_PRIS.Utilities
             }
         }
 
+        
 
         public string generate_Query(List<List<string>> entries, string insertionQuery)
         {
@@ -99,6 +102,17 @@ namespace COA_PRIS.Utilities
                 modified_Table.Rows.Add(row);
             }
             return modified_Table;
+        }
+
+        public int get_ChildIndex(Control parent, Control child)
+        {
+            for (int i = 0; i < parent.Controls.Count; i++)
+            {
+                if (parent.Controls[i] == child)
+                    return i;
+                
+            }
+            return -1;
         }
     }
 }

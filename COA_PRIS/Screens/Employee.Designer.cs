@@ -34,7 +34,6 @@
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.employee_Btn = new Guna.UI.WinForms.GunaButton();
             this.inactive_Btn = new Guna.UI.WinForms.GunaButton();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +50,7 @@
             this.parent_panel.Location = new System.Drawing.Point(11, 13);
             this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
             this.parent_panel.Name = "parent_panel";
-            this.parent_panel.Size = new System.Drawing.Size(1569, 877);
+            this.parent_panel.Size = new System.Drawing.Size(1534, 860);
             this.parent_panel.TabIndex = 0;
             // 
             // container_Panel
@@ -61,7 +60,7 @@
             this.container_Panel.Location = new System.Drawing.Point(0, 60);
             this.container_Panel.Name = "container_Panel";
             this.container_Panel.Padding = new System.Windows.Forms.Padding(8);
-            this.container_Panel.Size = new System.Drawing.Size(1569, 817);
+            this.container_Panel.Size = new System.Drawing.Size(1534, 800);
             this.container_Panel.TabIndex = 2;
             // 
             // line_Panel
@@ -70,7 +69,7 @@
             this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.line_Panel.Location = new System.Drawing.Point(0, 55);
             this.line_Panel.Name = "line_Panel";
-            this.line_Panel.Size = new System.Drawing.Size(1569, 5);
+            this.line_Panel.Size = new System.Drawing.Size(1534, 5);
             this.line_Panel.TabIndex = 1;
             // 
             // nav_panel
@@ -82,7 +81,7 @@
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
             this.nav_panel.Name = "nav_panel";
-            this.nav_panel.Size = new System.Drawing.Size(1569, 55);
+            this.nav_panel.Size = new System.Drawing.Size(1534, 55);
             this.nav_panel.TabIndex = 0;
             // 
             // employee_Btn
@@ -110,7 +109,7 @@
             this.employee_Btn.OnHoverForeColor = System.Drawing.Color.White;
             this.employee_Btn.OnHoverImage = null;
             this.employee_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.employee_Btn.Size = new System.Drawing.Size(180, 55);
+            this.employee_Btn.Size = new System.Drawing.Size(200, 55);
             this.employee_Btn.TabIndex = 0;
             this.employee_Btn.Text = "RECORDS";
             this.employee_Btn.TextOffsetX = 5;
@@ -133,7 +132,7 @@
             this.inactive_Btn.Image = global::COA_PRIS.Properties.Resources.moon;
             this.inactive_Btn.ImageOffsetX = 5;
             this.inactive_Btn.ImageSize = new System.Drawing.Size(30, 30);
-            this.inactive_Btn.Location = new System.Drawing.Point(181, 0);
+            this.inactive_Btn.Location = new System.Drawing.Point(201, 0);
             this.inactive_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.inactive_Btn.Name = "inactive_Btn";
             this.inactive_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
@@ -141,25 +140,18 @@
             this.inactive_Btn.OnHoverForeColor = System.Drawing.Color.White;
             this.inactive_Btn.OnHoverImage = null;
             this.inactive_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.inactive_Btn.Size = new System.Drawing.Size(180, 55);
+            this.inactive_Btn.Size = new System.Drawing.Size(200, 55);
             this.inactive_Btn.TabIndex = 1;
             this.inactive_Btn.Text = "INACTIVE";
             this.inactive_Btn.TextOffsetX = 5;
             this.inactive_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1591, 901);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.parent_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employee";
@@ -179,6 +171,5 @@
         private Guna.UI.WinForms.GunaButton inactive_Btn;
         private Guna.UI.WinForms.GunaPanel line_Panel;
         private Guna.UI.WinForms.GunaPanel container_Panel;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }

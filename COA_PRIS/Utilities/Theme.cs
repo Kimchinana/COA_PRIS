@@ -36,7 +36,7 @@ namespace COA_PRIS.Utilities
              (bool is_Percentage, int value)[] column_Width,
              (string title, DataGridViewContentAlignment alignment)[] column_Properties,
 
-             int row_Height = 45, int col_height = 50)
+             int row_Height = 50, int col_height = 55)
         {
             // Create column header style
             GunaDataGridViewHeaderStyle columnHeaderStyle = new GunaDataGridViewHeaderStyle(guna_Table.ColumnHeadersDefaultCellStyle, guna_Table);
@@ -80,10 +80,8 @@ namespace COA_PRIS.Utilities
             for (int i = 0; i < guna_Table.Rows.Count; i++)
             {
                 if (i % 2 == 0)
-                {
-                    rowStyle.BackColor = Hex_To_RGB("#FFFFFF");
-                    //guna_Table.Rows[i].DefaultCellStyle.BackColor = Hex_To_RGB("#C7C8CC");
-                }
+                    rowStyle.BackColor = Hex_To_RGB("#F0F0F0");
+
             }
         }
     }
